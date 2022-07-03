@@ -1,3 +1,4 @@
+const fs = require("fs")
 module.exports = class Contenedor {
     constructor(file) {
         this.file = file;
@@ -7,7 +8,6 @@ module.exports = class Contenedor {
         try {
             const check = await fs.promises.readFile(`${this.file}`, 'utf-8');
             return JSON.parse(check);
-            ///https://stackoverflow.com/questions/37605464/asynchronous-version-of-json-stringify-and-json-parse;
 
         } catch (error) {
             console.log('El archivo está vacío');
