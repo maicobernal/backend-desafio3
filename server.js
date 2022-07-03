@@ -1,8 +1,3 @@
-//npm init -y; npm i express; echo "node_modules" >> .gitignore; touch index.js
-//import Contenedor from './carrito.js';
-//const {Container} = Contenedor;
-//import {Productos} from './products.js';
-
 const express = require('express')
 const moment = require('moment')
 const Contenedor = require ('./carrito.js')
@@ -52,6 +47,6 @@ app.get('/visitas', (req, res)=>{
 
 app.get('/fyh', (req, res)=>{
     const fyh = moment().format('YYYY/MM/DD HH:mm:ss')
-    res.send(fyh)
+    res.send(`La hora actual es: ${fyh}`)
 })
 
